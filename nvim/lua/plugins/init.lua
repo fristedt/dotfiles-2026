@@ -91,15 +91,18 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    branch = "master",
+    branch = "main",
+    lazy = false,
     build = ":TSUpdate",
-    event = { "BufReadPost", "BufNewFile" },
-    opts = {
-      ensure_installed = { "bash", "go", "gomod", "gosum", "javascript", "json", "lua", "markdown", "tsx", "typescript", "vim", "yaml" },
-      auto_install = false,
-      highlight = { enable = true },
-      indent = { enable = true },
-    },
+    config = function()
+      require("nvim-treesitter").setup({})
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function(event)
+          -- Parsers are installed explicitly; skip highlighting when one is absent.
+          pcall(vim.treesitter.start, event.buf)
+        end,
+      })
+    end,
   },
   {
     "lewis6991/gitsigns.nvim",
