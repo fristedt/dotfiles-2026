@@ -1,0 +1,27 @@
+# Use the installed Nerd Font so the Agnoster prompt's symbols render correctly.
+font-family = Hack Nerd Font Mono
+font-size = 14
+
+# Ghostty's automatic zsh integration enables prompt and directory tracking.
+shell-integration = detect
+
+# Option+Backspace deletes the previous word (sends Ctrl+W, zsh's unix-word-rubout)
+keybind = alt+backspace=text:\x17
+
+# Disable Ghostty splits (tmux handles panes)
+keybind = super+d=unbind
+keybind = super+shift+d=unbind
+keybind = super+[=unbind
+keybind = super+]=unbind
+keybind = super+alt+arrow_up=unbind
+keybind = super+alt+arrow_down=unbind
+keybind = super+alt+arrow_left=unbind
+keybind = super+alt+arrow_right=unbind
+keybind = super+ctrl+arrow_up=unbind
+keybind = super+ctrl+arrow_down=unbind
+keybind = super+ctrl+arrow_left=unbind
+keybind = super+ctrl+arrow_right=unbind
+keybind = super+ctrl+==unbind
+keybind = super+shift+enter=unbind
+
+theme = GitHub Dark Default
