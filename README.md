@@ -1,6 +1,6 @@
 # dotfiles
 
-Personal configuration for Ghostty, tmux, Neovim, and OpenCode.
+Personal configuration for Ghostty, tmux, Neovim, OpenCode, and zsh.
 
 ## Install
 
@@ -15,6 +15,7 @@ ln -sfn "$PWD/ghostty/config" ~/.config/ghostty/config
 ln -sfn "$PWD/tmux/tmux.conf" ~/.tmux.conf
 ln -sfn "$PWD/nvim" ~/.config/nvim
 ln -sfn "$PWD/opencode/opencode.jsonc" ~/.config/opencode/opencode.jsonc
+ln -sfn "$PWD/zsh/zshrc" ~/.zshrc
 ```
 
 OpenCode's personal `opencode.json` may contain machine- or organization-specific provider settings; this repository includes only the general JSONC config.
